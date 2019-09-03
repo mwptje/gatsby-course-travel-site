@@ -17,7 +17,7 @@ export default () => (
     <SimpleHero>
       <Banner
         title="continue exploring"
-        info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, atque?"
+        info="Following John Smilga's course on Gatsby Development"
       >
         <Link to="/tours" className="btn-white">
           explore tours
