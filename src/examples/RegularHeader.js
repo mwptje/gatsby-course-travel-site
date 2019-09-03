@@ -1,0 +1,34 @@
+import React from "react"
+// this is an example using the StaticQuery method
+// useStaticQuery seems to be more easy to understand
+
+import { StaticQuery, graphql } from "gatsby"
+
+const getSiteData = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+      }
+    }
+  }
+`
+const RegularHeader = () => {
+  return (
+    <StaticQuery
+      query={getSiteData}
+      render={data => {
+        return (
+          <div>
+            <h2>title: {data.site.siteMetadata.title}</h2>
+            <h2>author: {data.site.siteMetadata.author}</h2>
+          </div>
+        )
+      }}
+    />
+  )
+}
+
+export default RegularHeader
