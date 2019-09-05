@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 // Encompassing layout
 import Layout from "../components/Layout"
-// graphql import
-import { graphql } from "gatsby"
+import Images from "../examples/Images"
 
 // adding the graphql functionality adds
 // the data section to props
@@ -15,21 +14,9 @@ const blog = props => {
   return (
     <Layout>
       This is my blog page <Link to="/">Home Page</Link>
-      <div>Title: {props.data.site.siteMetadata.title}</div>
-      <div>Author: {props.data.site.siteMetadata.author}</div>
+      <Images />
     </Layout>
   )
 }
 
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
-    }
-  }
-`
 export default blog
