@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 // Encompassing layout
 import Layout from "../components/Layout"
-import Images from "../examples/Images"
+import StyledHero from "../components/StyledHero"
+import { graphql } from "gatsby"
 
 // adding the graphql functionality adds
 // the data section to props
@@ -10,13 +10,24 @@ import Images from "../examples/Images"
 // you can decompose props to data by using the
 // const blob = ({data}) => {} construction
 
-const blog = props => {
+const blog = ({ data }) => {
   return (
     <Layout>
-      This is my blog page <Link to="/">Home Page</Link>
-      <Images />
+      <StyledHero img={data.blogBcg.childImageSharp.fluid} />
     </Layout>
   )
 }
 
 export default blog
+
+export const query = graphql`
+  query {
+    blogBcg: file(relativePath: { eq: "blogBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
