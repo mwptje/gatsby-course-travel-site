@@ -1,16 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
 // Encompassing layout
+// content between the Layout tags is know as children
+// and passed to a sush to the layout component
 import Layout from "../components/Layout"
 import Banner from "../components/Banner"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
-// content between the Layout tags is know as children
-// and passed to a sush to the layout component
-// Import icon from fontawsom using react-icons
-// import { FaBeer } from "react-icons/fa"
+import FeaturedTours from "../components/Home/FeaturedTours"
 
 export default ({ data }) => (
   <Layout>
@@ -26,6 +25,7 @@ export default ({ data }) => (
     </StyledHero>
     <About />
     <Services />
+    <FeaturedTours />
   </Layout>
 )
 
