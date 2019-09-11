@@ -6,7 +6,7 @@ import styles from "../css/template.module.css"
 import Img from "gatsby-image"
 import { FaMoneyBillWave, FaMap } from "react-icons/fa"
 import Day from "../components/SingleTour/Day"
-
+import { Link } from "gatsby"
 const Template = ({ data }) => {
   const {
     name,
@@ -55,6 +55,14 @@ const Template = ({ data }) => {
           <h4>duration : {days} days</h4>
           <p className={styles.desc}>{description}</p>
           <h2>daily schedule</h2>
+          <div className={styles.journey}>
+            {journey.map((item, index) => {
+              return <Day key={index} day={item.day} info={item.info} />
+            })}
+          </div>
+          <Link to="/tours" className="btn-primary">
+            back to tours
+          </Link>
         </div>
       </section>
     </Layout>
