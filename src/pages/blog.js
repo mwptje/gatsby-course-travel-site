@@ -8,12 +8,14 @@ import { graphql } from "gatsby"
 // the data section to props
 // this is called PageQuery
 // you can decompose props to data by using the
-// const blob = ({data}) => {} construction
+// const blog = ({data}) => {} construction
+import BlogList from "../components/Blog/BlogList"
 
 const blog = ({ data }) => {
   return (
     <Layout>
       <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+      <BlogList />
     </Layout>
   )
 }
