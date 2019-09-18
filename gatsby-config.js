@@ -19,6 +19,15 @@ module.exports = {
     siteUrl: "https://gatsby-course-travel-site.netlify.com",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://gatsby-course-travel-site.netlify.com",
+        sitemap: "https://gatsby-course-travel-site.netlify.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

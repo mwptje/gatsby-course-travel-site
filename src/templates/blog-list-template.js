@@ -17,7 +17,7 @@ const Blog = props => {
   const { data } = props
   return (
     <Layout>
-      <SEO title={data.edges.node.title} />
+      <SEO title="Blogs" />
       <section className={styles.blog}>
         <Title title="latest" subtitle="posts" />
         <div className={styles.center}>
