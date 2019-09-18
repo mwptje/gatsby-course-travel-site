@@ -12,10 +12,14 @@ module.exports = {
   siteMetadata: {
     title: "BackRoads",
     description:
-      "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
+      "Following John Smilga's course on Gatsby Development. Using Gatsby, React & Graphql",
     author: "@johndoe",
+    twitterUsername: "@john_doe",
+    image: "defaultBcg.jpeg",
+    siteUrl: "https://gatsby-course-travel-site.netlify.com",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
