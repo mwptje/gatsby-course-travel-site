@@ -10,10 +10,12 @@ import { graphql } from "gatsby"
 // you can decompose props to data by using the
 // const blog = ({data}) => {} construction
 import BlogList from "../components/Blog/BlogList"
+import SEO from "../components/SEO"
 
 const blog = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Blog" />
       <StyledHero img={data.blogBcg.childImageSharp.fluid} />
       <BlogList />
     </Layout>
