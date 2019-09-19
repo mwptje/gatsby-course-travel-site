@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 # also the environment keys file
 .env.development
+.env.production
 # Runtime data
 pids
 *.pid
