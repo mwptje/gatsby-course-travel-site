@@ -1,4 +1,18 @@
+<h1 align="center">
+  Travel site example based on John Smilga's course Gatsby Tutorial and Projects
+</h1>
+
+[Link to finished project](https://gatsby-course-travel-site.netlify.com/)
+
+This repository uses:
+
+* Gatsby
+* React
+* GraphQL
+* Contentful as a headless content server 
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
@@ -7,8 +21,6 @@
 <h1 align="center">
   Gatsby's hello-world starter
 </h1>
-
-[Link to finished project](https://master--gatsby-course-travel-site.netlify.com/)
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
